@@ -1,0 +1,579 @@
+body {
+    background-image: url('images/back .png'); /* Set your image */
+    background-repeat: no-repeat; /* Prevent repetition */
+    background-position: center top; /* Aligns the image to the top center */
+    background-size:contain; /* Ensures the image fits without cropping or stretching */
+    background-color: black; /* Adds a fallback background color */
+    margin: 0;
+    padding: 0;
+  }
+  html{
+    scroll-behavior: smooth;
+  }
+  
+  /* Container */
+  .container {
+    padding: 10px 10%;
+  }
+  
+  /* Navigation */
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  nav .logo {
+    width: 200px;
+    height: auto;
+    margin-top: -20px;
+  }
+  
+  nav ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav ul li {
+    list-style: none;
+    margin: 10px 20px;
+    position: relative; 
+    transform: translateY(-60px);
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    padding: 5px 0; 
+  }
+  
+  nav ul li a::after {
+    content: " ";
+    width: 100%;
+    height: 3px;
+    background: red;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transform: scaleX(0); 
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+  
+  nav ul li a:hover::after {
+    transform: scaleX(1); 
+  }
+  
+  nav ul li a:hover {
+    color: #f0f0f0; 
+  }
+  
+  /* Header Text */
+  .header-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .header-text p {
+    font-size: 24px;
+    margin: 0;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .header-text h1 {
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #fff; /* Cursor effect */
+    width: 0; /* Starts with no visible text */
+    animation: typing 5s steps(22) 1s forwards, blink 0.5s step-end infinite;
+  }
+  
+  .header-text h1 span {
+    color: #ff6347; /* Optional: Color for "Rohan Rao" */
+  }
+  
+  /* Typing effect */
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 220ch; /* Adjust based on the length of the text */
+    }
+  }
+  
+  /* Blinking cursor */
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+  
+  /* About Section */
+  #about {
+    padding: 80px 0;
+    color: #ababab;
+    margin-top: 800px;
+    font-size: 18px;
+  }
+  .row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .about-col-1 {
+    flex-basis: 35%;
+  }
+  
+  .about-col-1 img {
+    width: 100%;
+    border-radius: 15px;
+  }
+  
+  .about-col-2 {
+    flex-basis: 60%;
+  }
+  
+  .sub-title {
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+  }
+  /* Header Text */
+.header-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.header-text p {
+  font-size: 24px;
+  margin: 0;
+  color: white;
+  font-weight: bold;
+}
+
+.header-text h1 {
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #fff; /* Cursor effect */
+  width: 0; /* Starts with no visible text */
+  animation: typing 4s steps(22) infinite, blink 0.5s step-end infinite; /* Continuous typing effect */
+}
+
+.header-text h1 span {
+  color: #ff6347; /* Optional: Color for "Rohan Rao" */
+}
+
+/* Typing effect with loop */
+@keyframes typing {
+  0% {
+      width: 0;
+  }
+  50% {
+      width: 16ch; /* Adjust based on the length of "Hi, I am Rohan" */
+  }
+  100% {
+      width: 0;
+  }
+}
+
+/* Blinking cursor */
+@keyframes blink {
+  50% {
+      border-color: transparent;
+  }
+}
+.tab-titles{
+  display: flex;
+  margin: 20px 0 40px;
+
+}
+.tab-links{
+  margin-right: 50px ;
+  font-size: 18px;
+  font-weight: 500;
+  cursor:pointer;
+  position: relative;
+}
+.tab-links::after{
+  content:"";
+  width:0;
+  height: 3px;
+  position:absolute;
+  left:0;
+  bottom: -8px;
+  transition: 0.5s;
+}
+.tab-links.active-link::after{
+  width: 50px;
+}
+.tab-contents ul li{
+  list-style:none;
+  margin:10px 0;
+
+}
+.tab-contents ul li span{
+  color: #b5b5b5;
+  font-size: 14px;
+}
+/* Tab styles */
+.tab-titles {
+  display: flex;
+  margin: 20px 0 40px;
+}
+
+.tab-links {
+  margin-right: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+
+/* Tab content */
+.tab-content {
+  display: none;
+}
+
+.tab-contents ul li {
+  list-style: none;
+  margin: 10px 0;
+}
+
+.tab-contents ul li span {
+  color: #b5b5b5;
+  font-size: 14px;
+}
+
+/* Display the content of the active tab */
+#skills {
+  display: none;
+}
+
+/* Hover effect to change the color of the active tab */
+/* Tab styles */
+.tab-titles {
+  display: flex;
+  margin: 20px 0 40px;
+}
+
+.tab-links {
+  margin-right: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-contents ul li {
+  list-style: none;
+  margin: 10px 0;
+}
+
+.tab-contents ul li span {
+  color: #b5b5b5;
+  font-size: 14px;
+}
+
+/* Display the content of the active tab */
+#skills {
+  display: none;
+}
+
+/* Hover effect to change the color of the active tab */
+.tab-links:hover {
+  color: #ff004f; /* Change text color to red on hover */
+}
+/* ----------------services---------*/
+#services{
+  padding: 30px 0;
+
+/* Services Section */
+#services {
+  padding: 30px 0;
+}
+
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+  color: #f0f0f0;
+}
+
+.services-list div {
+  background: #262626;
+  padding: 40px;
+  font-size: 13px;
+  font-weight: 300;
+  border-radius: 10px; /* Adds rounded corners */
+  transition: background 0.5s, transform 0.5s;
+  text-align: center; /* Centers text within the card */
+}
+
+.services-list div h2 {
+  font-size: 50px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.services-list div a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.services-list div:hover {
+  background: #ff004f;
+  transform: translateY(-10px); /* Moves the card upward slightly */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adds a shadow for better effect */
+}
+}
+/*------------portfilio----------*/
+#portfolio {
+  padding: 50px 0;
+}
+
+.work-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px; /* Adjusted to add a clear gap */
+  margin-top: 50px;
+}
+
+.work {
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.work img {
+  width: 100%;
+  object-fit: cover; /* Prevents image distortion */
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.5s; /* Corrected 'tranform' to 'transform' */
+}
+
+.layer {
+  color: #f0f0f0;
+  width: 100%;
+  height: 0; /* Initially hidden layer */
+  background: linear-gradient(rgba(0, 0, 0, 0.6), #ff004f);
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 ;
+  text-align: center;
+  font-size: 20px;
+  transition: height 0.5s;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.layer h3 {
+  font-weight: 500;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.layer p{
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.layer a {
+  margin-top: 20px;
+  color: #ff004f;
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 60px;
+  background: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align:center;
+}
+
+.work:hover img {
+  transform: scale(0.9); /* Shrinks image */
+}
+
+.work:hover .layer {
+  height: 100%; /* Expands the layer */
+}
+.btn{
+  display:block;
+  margin:50px auto;
+  width:fit-content;
+  border:1px solid #ff004f;
+  padding: 14px 50px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #fff;
+  transition: background 0.5s;
+}
+.btn:hover{
+  background: #ff004f;
+}
+/*----------------contact------------*/
+/* Styling social icons and logos */
+.social-icons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.social-icon img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white; /* White background */
+  padding: 5px; /* Space around the icon for better visibility */
+  border: 2px solid #ddd;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+/* Hover effect for social icons */
+.social-icon img:hover {
+  transform: scale(1.2); /* Slight zoom effect */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Shadow around the icon */
+  border-color: #ff004f; /* Changes border color to a highlight color */
+}
+
+/* Styling inline icons like email/phone logos */
+p img.icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-right: 10px;
+  background-color: white; /* White background for inline icons */
+  padding: 2px; /* Space around the inline icon */
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover effect for inline icons */
+p:hover img.icon {
+  transform: scale(1.1);
+}
+/* Styling for the text in <p> tags */
+p {
+  color: white; /* Set text color (dark gray for better readability) */
+  font-size: 20px; /* Adjust font size */
+  margin: 10px 0; /* Add space between paragraphs */
+  display: flex; /* Align icon and text in a row */
+  align-items: center; /* Vertically center the icon with the text */
+}
+
+/* Add spacing between the icon and text */
+p img {
+  margin-right: 10px; /* Adds space between the icon and text */
+  background-color: white; /* White background for icons */
+  padding: 5px; /* Add padding around the icon for spacing */
+  border-radius: 50%;
+  width: 20px; /* Circular icon style */
+}
+.contact-right form{
+  width:100%;
+
+}
+/* Contact Section Container */
+#contact .container {
+  display: flex; /* Flexbox layout */
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  gap: 20px; /* Space between the form and social icons */
+  align-items: flex-start; /* Align content at the top */
+}
+
+/* Social Icons Section */
+.contact-left {
+  flex: 1; /* Take one portion of the width */
+  min-width: 300px; /* Minimum width to prevent shrinking too much */
+}
+
+/* Contact Form Section */
+.contact-right {
+  flex: 2; /* Take two portions of the width */
+  min-width: 300px; /* Minimum width to prevent shrinking too much */
+}
+
+/* Styling the form inputs and textarea */
+form input,
+form textarea {
+  width: 100%; /* Full width */
+  border: 0;
+  outline: none;
+  background: #262626; /* Dark background */
+  padding: 15px;
+  margin: 15px 0;
+  color: #fff; /* White text */
+  font-size: 18px;
+  border-radius: 6px;
+}
+
+/* Submit button styling */
+form {
+  margin-left: auto;  /* Pushes the form to the right */
+  margin-right: 0;    /* Removes any default right margin */
+  margin-top: -290px;
+}
+
+input, textarea {
+  width: 200%;              /* Full width of the parent container */
+  padding: 200px;            /* Increased padding for larger input areas */
+  font-size: 20px;          /* Larger text inside the inputs and textarea */
+  margin: 15px 0;           /* Adds space between inputs and textarea */
+  border-radius: 6px;      /* Round corners */
+  background-color: #262626; /* Dark background */
+  border: 1px solid #ccc;  /* Lighter border for input fields */
+  color: white;            /* Text color */
+}
+
+form button {
+  background-color: #ff004f; /* Highlight color */
+  color: white;
+  border: 0;
+  padding: 15px 30px;       /* Increased padding for larger button */
+  font-size: 20px;           /* Larger text for button */
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #e60045; /* Slightly darker hover effect */
+}
