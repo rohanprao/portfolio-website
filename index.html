@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Personal portfolio of Your Name – developer/designer. Projects, skills, and contact." />
+    <title>ROHAN RAO• Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <canvas id="particles" aria-hidden="true"></canvas>
+    <!-- Header / Navbar -->
+    <header class="header" id="top">
+      <div class="container nav">
+        <a href="#home" class="brand" aria-label="Go to home">Rohan<span>Rao</span></a>
+        <button class="nav__toggle" aria-label="Open Menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+        <nav class="nav__menu" role="navigation">
+          <a href="#home" class="nav__link">Home</a>
+          <a href="#about" class="nav__link">About</a>
+          <a href="#projects" class="nav__link">Projects</a>
+          <a href="#skills" class="nav__link">Skills</a>
+          <a href="#contact" class="nav__link">Contact</a>
+        </nav>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle color theme">
+          <span id="theme-icon" aria-hidden="true">☀</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <main id="home" class="section hero">
+      <div class="container hero__grid">
+        <div class="hero__text reveal" data-reveal="100">
+          <p class="eyebrow">Hello, I’m</p>
+          <h1>ROHAN RAO</h1>
+          <p class="subtitle">AI ML Engineer • Data Scientist • Problem Solver</p>
+          <div class="hero__cta">
+            <a href="#projects" class="btn btn--primary">View Projects</a>
+            <a href="#contact" class="btn btn--ghost">Contact Me</a>
+          </div>
+          <div class="hero__meta">
+            <span>Belagavi, Karnataka, India</span>
+            <span>Open to opportunities</span>
+          </div>
+        </div>
+        <div class="hero__image reveal" data-reveal="200">
+          <img src="assets/photo.jpeg" alt="Your portrait illustration" />
+        </div>
+      </div>
+    </main>
+
+    <!-- About -->
+    <section id="about" class="section section--alt">
+      <div class="container grid-2">
+        <div class="reveal" data-reveal="100">
+          <h2>About Me</h2>
+          <p>
+            I’m an AI/ML Engineer and Data Scientist building intelligent systems. I specialize in machine learning, deep learning, and data-driven solutions that solve real-world problems.
+          </p>
+          <p>
+            I enjoy working with cutting-edge technologies to develop predictive models, natural language processing, and computer vision applications that deliver actionable insights.
+          </p>
+          <div class="about__list">
+            <div class="about__item"><span>Specialty:</span> AI/ML, Data Science</div>
+            <div class="about__item"><span>Focus:</span> Python, TensorFlow, PyTorch</div>
+          </div>
+        </div>
+        <div class="about__card reveal" data-reveal="200">
+          <div class="about__stat">
+            <div class="num">6+</div>
+            <div class="label">Projects</div>
+          </div>
+          <div class="about__stat">
+            <div class="num">1</div>
+            <div class="label">Research Paper </div>
+          </div>
+          <div class="about__stat">
+            <div class="num">3</div>
+            <div class="label">Hackathon Wins</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="reveal" data-reveal="100">Featured Projects</h2>
+        <div class="projects__grid">
+          <a href="projects/ai-retail-assistant.html" class="card-link">
+            <article class="card reveal" data-reveal="100">
+              <img src="logo/Gemini_Generated_Image_wtm03iwtm03iwtm0.png" alt="AI Retail Assistant screenshot" />
+              <div class="card__body">
+                <h3>AI Retail Assistant</h3>
+                <p>AI-powered chatbot for retail customer support using NLP and ML for query resolution and personalized recommendations.</p>
+                <div class="tags">
+                  <span>Python</span><span>NLP</span><span>ML</span><span>Streamlit</span><span>SQL</span>
+                </div>
+                <div class="card__actions">
+                  <span class="btn btn--sm">View Project</span>
+                </div>
+              </div>
+            </article>
+          </a>
+          <a href="projects/career-ai.html" class="card-link">
+            <article class="card reveal" data-reveal="200">
+              <img src="logo/111.png" alt="CareerAI screenshot" />
+              <div class="card__body">
+                <h3>CareerAI</h3>
+                <p>AI-driven career guidance platform providing personalized job recommendations using machine learning algorithms.</p>
+                <div class="tags">
+                  <span>Python</span><span>ML</span><span>Html</span><span>SQL</span><span>Css</span><span>JavaScript</span>
+                </div>
+                <div class="card__actions">
+                  <span class="btn btn--sm">View Project</span>
+                </div>
+              </div>
+            </article>
+          </a>
+          <a href="projects/data-analysis-tool.html" class="card-link">
+            <article class="card reveal" data-reveal="300">
+              <img src="logo/2222.png" alt="Data Analysis Tool screenshot" />
+              <div class="card__body">
+                <h3>FreeBay</h3>
+                <p>A community-driven platform for sustainable living through item sharing and reuse, connecting people who want to give away items with those who need them.</p>
+                <div class="tags">
+                  <span>Html</span><span>Css</span><span>Firebase</span><span>API</span>
+                </div>
+                <div class="card__actions">
+                  <span class="btn btn--sm">View Project</span>
+                </div>
+              </div>
+            </article>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section section--alt">
+      <div class="container">
+        <h2 class="reveal" data-reveal="100">Skills</h2>
+        <div class="skills-container">
+          <div class="skills-category">
+            <h3>Languages</h3>
+            <ul class="skills-list">
+              <li>
+                <div class="skill-item">
+                  <img src="logo/icons8-python-100.png" alt="Python" class="skill-icon" />
+                  <span class="skill-name">Python</span>
+                </div>
+              </li>
+              <li>
+                <div class="skill-item">
+                  <img src="logo/icons8-c-100.png" alt="C" class="skill-icon" />
+                  <span class="skill-name">C</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="skills-category">
+            <h3>Libraries & Frameworks</h3>
+            <ul class="skills-list">
+              <li>
+                <div class="skill-item">
+                  <img src="logo/icons8-tensorflow-48.png" alt="TensorFlow" class="skill-icon" />
+                  <span class="skill-name">TensorFlow</span>
+                </div>
+              </li>
+              <li>
+                <div class="skill-item">
+                  <img src="logo/icons8-pytorch-48.png" alt="PyTorch" class="skill-icon" />
+                  <span class="skill-name">PyTorch</span>
+                </div>
+              </li>
+              <li>
+                <div class="skill-item">
+                  <img src="logo/icons8-keras-24.png" alt="Keras" class="skill-icon" />
+                  <span class="skill-name">Keras</span>
+                </div>
+              </li>
+              <li>
+                <div class="skill-item">
+                  <img src="logo/icons8-hugging-face-96.png" alt="Hugging Face" class="skill-icon" />
+                  <span class="skill-name">Hugging Face</span>
+                </div>
+              </li>
+              <li>
+    
+              </li>
+            </ul>
+          </div>
+          <div class="skills-category">
+            <h3>Tools & Technologies</h3>
+            <ul class="skills-list">
+              <li>
+                <div class="skill-item">
+                  <img src="logo/icons8-machine-learning-53.png" alt="Machine Learning" class="skill-icon" />
+                  <span class="skill-name">Machine Learning</span>
+                </div>
+              </li>
+              <li>
+                <div class="skill-item">
+                  <img src="logo/icons8-tableau-software-48.png" alt="Tableau" class="skill-icon" />
+                  <span class="skill-name">Tableau</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="skills-category">
+            <h3>Databases</h3>
+            <ul class="skills-list">
+              <li>
+                <div class="skill-item">
+                  <img src="logo/icons8-mysql-96.png" alt="SQL" class="skill-icon" />
+                  <span class="skill-name">SQL</span>
+                </div>
+              </li>
+              <li>
+                <div class="skill-item">
+                  <img src="logo/icons8-mongodb-48.png" alt="MongoDB" class="skill-icon" />
+                  <span class="skill-name">MongoDB</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section-title reveal" data-reveal="100">Get In Touch</h2>
+        <p class="contact-subtitle reveal" data-reveal="150">Have a question or proposal, or just want to say hello? I'll get back to you as soon as possible!</p>
+        
+        <div class="contact-container">
+          <div class="contact-info reveal" data-reveal="200">
+            <div class="contact-method">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-details">
+                <h3>Email Me</h3>
+                <a href="mailto:rohanrao@example.com">rohanrao@example.com</a>
+              </div>
+            </div>
+            
+            <div class="contact-method">
+              <div class="contact-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </div>
+              <div class="contact-details">
+                <h3>LinkedIn</h3>
+                <a href="https://www.linkedin.com/in/rohan-rao-5403a9240/" target="_blank" rel="noopener">Connect with me</a>
+              </div>
+            </div>
+            
+            <div class="contact-method">
+              <div class="contact-icon">
+                <i class="fab fa-github"></i>
+              </div>
+              <div class="contact-details">
+                <h3>GitHub</h3>
+                <a href="https://github.com/rohanprao" target="_blank" rel="noopener">View my work</a>
+              </div>
+            </div>
+            
+            <div class="contact-method">
+              <div class="contact-icon">
+                <i class="fas fa-code"></i>
+              </div>
+              <div class="contact-details">
+                <h3>LeetCode</h3>
+                <a href="https://leetcode.com/u/rohanprao/" target="_blank" rel="noopener">Check my profile</a>
+              </div>
+            </div>
+          </div>
+          
+          <form class="contact-form reveal" data-reveal="200" name="contact" onsubmit="return false" novalidate>
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <div class="input-with-icon">
+                <i class="fas fa-user"></i>
+                <input type="text" id="name" name="name" placeholder="John Doe" required />
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <div class="input-with-icon">
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required />
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <div class="input-with-icon">
+                <i class="fas fa-tag"></i>
+                <input type="text" id="subject" name="subject" placeholder="What's this about?" required />
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <div class="input-with-icon textarea-container">
+                <i class="fas fa-comment"></i>
+                <textarea id="message" name="message" rows="5" placeholder="How can I help you?" required></textarea>
+              </div>
+            </div>
+            
+            <button class="btn btn--primary" type="submit">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+            
+            <p class="form-note">This is a demo form. Update to connect a backend or service.</p>
+          </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer__grid">
+        <p>© <span id="year"></span> Your Name. All rights reserved.</p>
+        <a href="#top" class="to-top" aria-label="Back to top">↑</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
