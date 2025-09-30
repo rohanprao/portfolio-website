@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreeBay | Rohan Rao</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        /* Project Detail Styles */
+        .project-detail {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        .project-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .project-title {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--text);
+        }
+        .project-subtitle {
+            font-size: 1.25rem;
+            color: var(--muted);
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            line-height: 1.6;
+        }
+        .project-image {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin: 2rem auto;
+        }
+        .project-content {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 3rem;
+            align-items: start;
+        }
+        .project-description {
+            line-height: 1.8;
+            color: var(--text);
+        }
+        .project-description h2 {
+            margin-top: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--text);
+        }
+        .project-description h3 {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: var(--text);
+        }
+        .project-description ul {
+            margin: 1.5rem 0;
+            padding-left: 1.5rem;
+        }
+        .project-description li {
+            margin-bottom: 0.75rem;
+            line-height: 1.6;
+        }
+        .project-sidebar {
+            position: sticky;
+            top: 2rem;
+            background: var(--bg-secondary);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+        }
+        .project-tag {
+            background: var(--primary);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            display: inline-block;
+        }
+        .project-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        .btn--primary {
+            background: var(--primary);
+            color: white;
+            border: 2px solid var(--primary);
+        }
+        .btn--primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+        .btn--ghost {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+        .btn--ghost:hover {
+            background: rgba(var(--primary-rgb), 0.1);
+            transform: translateY(-2px);
+        }
+        @media (max-width: 768px) {
+            .project-content {
+                grid-template-columns: 1fr;
+            }
+            .project-sidebar {
+                position: static;
+            }
+        }
+    </style>
+</head>
+<body>
+    <canvas id="particles" aria-hidden="true"></canvas>
+    <header class="header" id="top">
+        <div class="container nav">
+            <a href="../index.html" class="brand" aria-label="Go to home">Rohan<span>Rao</span></a>
+            <button class="nav__toggle" aria-label="Open Menu" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <nav class="nav__menu" role="navigation">
+                <a href="../index.html#home" class="nav__link">Home</a>
+                <a href="../index.html#about" class="nav__link">About</a>
+                <a href="../index.html#projects" class="nav__link">Projects</a>
+                <a href="../index.html#skills" class="nav__link">Skills</a>
+                <a href="../index.html#contact" class="nav__link">Contact</a>
+            </nav>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle color theme">
+                <span id="theme-icon" aria-hidden="true">☀</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="project-detail container">
+        <div class="project-header">
+            <h1 class="project-title">FreeBay</h1>
+            <p class="project-subtitle">A community-driven platform for sustainable living through item sharing and reuse</p>
+            <img src="../logo/2222.png" alt="FreeBay Screenshot" class="project-image">
+        </div>
+
+        <div class="project-content">
+            <div class="project-description">
+                <h2>About the Project</h2>
+                <p>FreeBay is a community-driven web platform that encourages sustainable living by allowing people to give away usable items for free. It's built on the principle of "one person's trash is another's treasure," creating a circular economy that reduces waste and builds stronger communities.</p>
+                
+                <h3>Key Features</h3>
+                <ul>
+                    <li><strong>Post Listings:</strong> Easily share clothes, books, furniture, electronics, and more with your local community.</li>
+                    <li><strong>Browse Nearby Items:</strong> Discover free items available in your locality with an intuitive map interface and search functionality.</li>
+                    <li><strong>Connect & Share:</strong> Build a culture of reuse, reduce waste, and promote community sharing through direct messaging and item reservations.</li>
+                    <li><strong>User Profiles:</strong> Build trust through verified profiles and user ratings.</li>
+                    <li><strong>Real-time Notifications:</strong> Get instant updates when someone is interested in your items or when new items are posted in your area.</li>
+                </ul>
+
+            </div>
+
+            <aside class="project-sidebar">
+                <div class="project-meta">
+                    <h4>Technologies Used</h4>
+                    <div class="project-tags">
+                        <span class="project-tag">HTML5</span>
+                        <span class="project-tag">CSS3</span>
+                        <span class="project-tag">JavaScript</span>
+                        <span class="project-tag">Firebase</span>
+                        <span class="project-tag">Google Maps API</span>
+                        <span class="project-tag">Responsive Design</span>
+                    </div>
+
+                    <div class="project-links">
+                        <a href="#" class="btn btn--primary" target="_blank" rel="noopener">Live Demo</a>
+                        <a href="https://github.com/rohanprao/FreeBay" class="btn btn--ghost" target="_blank" rel="noopener">Source Code</a>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <script src="../script.js"></script>
+</body>
+</html>

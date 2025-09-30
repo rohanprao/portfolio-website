@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Retail Assistant | Rohan Rao</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .project-detail {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        .project-header {
+            margin-bottom: 3rem;
+        }
+        .project-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+        .project-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+        .project-image {
+            width: 100%;
+            max-height: 500px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .project-content {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 3rem;
+        }
+        .project-description {
+            line-height: 1.8;
+            color: var(--text-primary);
+        }
+        .project-sidebar {
+            background: var(--bg-secondary);
+            padding: 2rem;
+            border-radius: 8px;
+            height: fit-content;
+        }
+        .project-meta h3 {
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+        }
+        .project-tag {
+            background: var(--primary);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            display: inline-block;
+        }
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .btn--primary {
+            background: var(--primary);
+            color: white;
+            border: 2px solid var(--primary);
+        }
+        .btn--primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+        .btn--ghost {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+        .btn--ghost:hover {
+            background: rgba(var(--primary-rgb), 0.1);
+            transform: translateY(-2px);
+        }
+        @media (max-width: 768px) {
+            .project-content {
+                grid-template-columns: 1fr;
+            }
+            .project-sidebar {
+                order: -1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <canvas id="particles" aria-hidden="true"></canvas>
+    <header class="header" id="top">
+        <div class="container nav">
+            <a href="../index.html" class="brand" aria-label="Go to home">Rohan<span>Rao</span></a>
+            <button class="nav__toggle" aria-label="Open Menu" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <nav class="nav__menu" role="navigation">
+                <a href="../index.html#home" class="nav__link">Home</a>
+                <a href="../index.html#about" class="nav__link">About</a>
+                <a href="../index.html#projects" class="nav__link">Projects</a>
+                <a href="../index.html#skills" class="nav__link">Skills</a>
+                <a href="../index.html#contact" class="nav__link">Contact</a>
+            </nav>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle color theme">
+                <span id="theme-icon" aria-hidden="true">☀</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="project-detail container">
+        <div class="project-header">
+            <h1 class="project-title">AI Retail Assistant</h1>
+            <p class="project-subtitle">An intelligent system designed to help store owners and customers manage shopping more efficiently through AI and automation</p>
+            <img src="../logo/Gemini_Generated_Image_wtm03iwtm03iwtm0.png" alt="AI Retail Assistant Screenshot" class="project-image">
+        </div>
+
+        <div class="project-content">
+            <div class="project-description">
+                <h2>About the Project</h2>
+                <p>The AI Retail Assistant is a comprehensive solution designed to transform retail operations through artificial intelligence. This system helps store owners manage inventory efficiently while providing customers with an enhanced shopping experience through intelligent assistance and automation.</p>
+                
+                <h3>Key Features</h3>
+                <ul>
+                    <li><strong>Smart Product Management:</strong> Automated tracking of product details including stock levels, pricing, and expiry dates, with real-time updates and alerts for low inventory.</li>
+                    <li><strong>Voice Interaction:</strong> Natural language processing enables store owners to update product information and check inventory hands-free, improving operational efficiency.</li>
+                    <li><strong>Customer Support:</strong> AI-powered assistance helps customers locate products, check availability, and receive personalized recommendations based on their preferences and purchase history.</li>
+                    <li><strong>Inventory Optimization:</strong> Predictive analytics help in maintaining optimal stock levels and reducing wastage of perishable goods.</li>
+                    <li><strong>Scalable Architecture:</strong> Modular design allows for easy integration with existing retail systems and point-of-sale (POS) software.</li>
+                </ul>
+
+                <h3>Technical Implementation</h3>
+                <p>The system was built using a microservices architecture to ensure high availability and scalability. The backend is powered by Python with FastAPI, while the frontend is built with React for a responsive user interface. The AI components include:</p>
+                <ul>
+                    <li>Natural Language Processing (NLP) for understanding and processing voice commands and customer queries</li>
+                    <li>Machine learning models for product recommendations and inventory forecasting</li>
+                    <li>Real-time database synchronization for accurate stock management</li>
+                    <li>Secure API integrations with payment gateways and existing retail systems</li>
+                </ul>
+                
+                <p>Key technical challenges included optimizing the voice recognition system for various accents and background noises, and implementing real-time inventory updates across multiple store locations. We addressed these through advanced noise cancellation techniques and a distributed database system with conflict resolution mechanisms.</p>
+            </div>
+
+            <aside class="project-sidebar">
+                <div class="project-meta">
+
+                    
+                    <h4>Technologies Used</h4>
+                    <div class="project-tags">
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag">NLP</span>
+                        <span class="project-tag">Machine Learning</span>
+                        <span class="project-tag">Streamlit</span>
+                        <span class="project-tag">SQL</span>
+                    </div>
+
+                    <div class="project-links">
+                        <a href="#" class="btn btn--primary" target="_blank" rel="noopener">Live Demo</a>
+                        <a href="https://github.com/rohanprao/AI-RETAIL-ASSISTANCE" class="btn btn--ghost" target="_blank" rel="noopener">Source Code</a>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <script src="../script.js"></script>
+</body>
+</html>
